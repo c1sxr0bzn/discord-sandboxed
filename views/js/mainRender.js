@@ -11,7 +11,7 @@ function convertObjToString(arr) {
     arr.forEach(function(i, idx, array){
         let _subStr = i.toString()
         arrStr = arrStr.concat("'").concat(_subStr).concat("'")
-        if (idx !== array.length - 1){ 
+        if (idx !== array.length - 1){
           arrStr = arrStr.concat(`,`)
         }
     })
@@ -19,7 +19,7 @@ function convertObjToString(arr) {
     return arrStr
 }
 
-function openMic(webview){  
+function openMic(webview){
     console.log("talking")
     document.getElementById("overlay").style.display = "block";
     webview.sendInputEvent({keyCode: 'Backspace', type: 'keyDown'});
@@ -55,7 +55,7 @@ function userMuteDeafenListener(webview) {
     webview.executeJavaScript(`
     const userMuteDeafen = document.getElementsByClassName("container-3baos1")[0]
     const userMuteDeafenconfig = { attributes: false, childList: true, subtree: true, characterData: false };
-    
+
     const userMuteDeafencallback = function(mutationsList, observer) {
         isMicMuted()
     };
@@ -77,19 +77,21 @@ onload = () => {
         'https://discord.com/api/v9/voice/regions',    // Required when creating new guild
         'https://discord.com/api/v9/guilds',           // Creating a guild
         'https://discord.com/api/v9/gateway',         // This may be required to get past login screen if not cached locally
-        'https://discord.com/api/v9/applications/',
-        'https://discord.com/api/v9/users/'
+        'https://discord.com/api/v9/users/',
+        'https://discord.com/api/v9/gifs/',
+        'https://api.spotify.com'
+
     ]
 
     const _whiteList = convertObjToString(whiteList)
 
     // Insert JS to detect when discord finishes loading
     webview.addEventListener('did-finish-load', function() {
-        
+
         webview.executeJavaScript(`
         (function(open, send) {
             let whiteList = ${_whiteList}
-            
+
             let xhrOpenRequestUrl
             let xhrSendResponseUrl
             let xhrMethod
@@ -114,7 +116,7 @@ onload = () => {
 
                     const Logger = window.__SENTRY__.logger
                     Logger.disable()
-        
+
                     const SentryHub =  window.DiscordSentry.getCurrentHub()
                     SentryHub.getClient().close(0)
                     SentryHub.getStackTop().scope.clear()
@@ -139,7 +141,7 @@ onload = () => {
                     return open.apply(this, false)
                 }
             }
-            
+
             XMLHttpRequest.prototype.send = function(data) {
                 if (_block === true || _isWhitelisted === false) {
                     console.log("--BLOCKED.SEND", data, xhrOpenRequestUrl, _isWhitelisted)
@@ -171,7 +173,7 @@ onload = () => {
             }
         }, 500);
         `)
-    
+
         // Insert a function that will be called later
         webview.executeJavaScript(`
             function isMicMuted() {
@@ -214,7 +216,7 @@ onload = () => {
             userMuteDeafenListener(webview)
             removeBloat(webview)
         }
-        
+
         if (e.message.toString().includes("--BLOCKED.OPEN")) {
             let _url = e.message.toString().split(",").find(a =>a.includes("http")).split("https://")[1]
             if (!(_url in blockedLibrary)) {
