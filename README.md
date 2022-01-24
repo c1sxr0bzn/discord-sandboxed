@@ -1,7 +1,7 @@
 # Discord-Sandbox 
 
 ## ⚠️ This is a forked version of the original, adding support for GIFs and the Spotify API.
-*Discord Stickers are not supported, useless anyway.*
+*Pre-build packages for Windows, Linux and MacOS are available.*
 
 > Open-source Sandbox Discord client for the privacy-minded. Say NO to intrusive data collection.
 
@@ -13,7 +13,7 @@ Note that since this client is running the Discord web client, the following fea
 
     - Viewing Streams or Streaming your desktop
     - Discord's "High Quality Audio" or whatever
-
+    - Stickers are not supported, useless anyways
 
 ## Push to Talk
 1. To enable push-to-talk, open Discord-Sandbox, set your push-to-talk key to `Backspace`, and lower the `Push to Talk Release Delay` slider all the way to 0 as shown.
@@ -72,8 +72,6 @@ When your push-to-talk key is held down, the renderer process will send a `backs
 2. Clone Repo `git clone https://github.com/khlam/discord-sandboxed.git`
 3. Install dependencies `npm i && npm i -d`
 4. Run `npm start`
-5. (Optional) Create Windows installer `npm run package-win`
-
 
 > This Discord-Sandbox open source project is not affiliated with Discord or Discord Inc.
 I do not claim to have created Discord.
