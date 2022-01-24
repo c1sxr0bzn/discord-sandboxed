@@ -60,11 +60,11 @@ This separates your activity from Discord without compromising usability.
 When your push-to-talk key is held down, the renderer process will send a `backspace` key-down keycode to the [\<webview>](https://developer.chrome.com/apps/tags/webview). This opens your microphone without giving the client window focus, so you can use Discord without worrying about the client listening in on whatever else you're running.
 
 ## Downloading pre-build installer.
-Only Windows is currently supported, you can manually run the build on Linux or MacOS when building from source.
+[Download installer for Windows.](https://github.com/c1sxr0bzn/discord-sandboxed/releases/download/1.0.0-stable/Sandbox-Setup.exe)
 
-[Download installer for Windows.](https://github.com/c1sxr0bzn/discord-sandboxed/releases)
-[Download AppImage for Linux.]()
-[Download app for MacOS.]()
+[Download AppImage for Linux.](https://github.com/c1sxr0bzn/discord-sandboxed/releases/download/1.0.0-stable/Discord.Sandboxed-1.1.6.AppImage)
+
+[Download app for MacOS.](https://github.com/c1sxr0bzn/discord-sandboxed/releases/download/1.0.0-stable/Discord-Sandboxed_MACOS.zip)
 
 ## Building From Source
 0. If you're using Windows 10, make sure you have the [latest C++ Redistributable for Visual Studio 2015, 2017, and 2019](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
