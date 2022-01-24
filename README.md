@@ -1,5 +1,8 @@
 # Discord-Sandbox <a href="https://github.com/khlam/discord-sandboxed/releases/latest"><img src="https://img.shields.io/badge/download-latest-green.svg"></a>
 
+## This is a forked version of the original, adding support for GIFs and the Spotify API.
+*Discord Stickers are not supported, useless anyway.*
+
 > Open-source Sandbox Discord client for the privacy-minded. Say NO to intrusive data collection.
 
 Are you worried Discord is watching what programs you have open or listening to your mic even while you're not pressing your push-to-talk key?
@@ -25,7 +28,7 @@ Note that since this client is running the Discord web client, the following fea
 
 
 ## Telemetry Mitigations
-As detailed from [Luna Mendes' discord-unofficial-docs]("https://luna.gitlab.io/discord-unofficial-docs/"), Discord sends telemetry data over the `/api/science` endpoint. This project does its best to disable this telemetry communication by running javascript code into the webview that adds a blacklist/whitelist to the default `XMLHttpRequest` behavior. In this way, we explicitly block all communication with the `science` address, while simultaneously whitelisting addresses needed for minimum Discord functionality. See the full code in [mainRender.js]("./views/js/mainRender.js"). 
+As detailed from [Luna Mendes' discord-unofficial-docs]("https://luna.gitlab.io/discord-unofficial-docs/"), Discord sends telemetry data over the `/api/science` endpoint. This project does its best to disable this telemetry communication by running javascript code into the webview that adds a blacklist/whitelist to the default `XMLHttpRequest` behavior. In this way, we explicitly block all communication with the `science` address, while simultaneously whitelisting addresses needed for minimum Discord functionality. See the full code in [mainRender.js]("./views/js/mainRender.js").
 
 
 Discord likely does other sneaky things to spy on us. If you have any ideas on improving this project's security/privacy please let me know by opening an issue!
