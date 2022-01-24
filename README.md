@@ -63,6 +63,8 @@ When your push-to-talk key is held down, the renderer process will send a `backs
 Only Windows is currently supported, you can manually run the build on Linux or MacOS when building from source.
 
 [Download installer for Windows.](https://github.com/c1sxr0bzn/discord-sandboxed/releases)
+[Download AppImage for Linux.]()
+[Download app for MacOS.]()
 
 ## Building From Source
 0. If you're using Windows 10, make sure you have the [latest C++ Redistributable for Visual Studio 2015, 2017, and 2019](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
