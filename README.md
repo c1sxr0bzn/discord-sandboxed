@@ -1,6 +1,6 @@
-# Discord-Sandbox <a href="https://github.com/khlam/discord-sandboxed/releases/latest"><img src="https://img.shields.io/badge/download-latest-green.svg"></a>
+# Discord-Sandbox 
 
-## This is a forked version of the original, adding support for GIFs and the Spotify API.
+## ⚠️ This is a forked version of the original, adding support for GIFs and the Spotify API.
 *Discord Stickers are not supported, useless anyway.*
 
 > Open-source Sandbox Discord client for the privacy-minded. Say NO to intrusive data collection.
@@ -59,6 +59,10 @@ This separates your activity from Discord without compromising usability.
 
 When your push-to-talk key is held down, the renderer process will send a `backspace` key-down keycode to the [\<webview>](https://developer.chrome.com/apps/tags/webview). This opens your microphone without giving the client window focus, so you can use Discord without worrying about the client listening in on whatever else you're running.
 
+## Downloading pre-build installer.
+Only Windows is currently supported, you can manually run the build on Linux or MacOS when building from source.
+
+[Download installer for Windows.](https://github.com/c1sxr0bzn/discord-sandboxed/releases)
 
 ## Building From Source
 0. If you're using Windows 10, make sure you have the [latest C++ Redistributable for Visual Studio 2015, 2017, and 2019](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
